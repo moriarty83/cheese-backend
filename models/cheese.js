@@ -1,0 +1,23 @@
+///////////////////////////////
+// DEPENDENCIES
+////////////////////////////////
+const mongoose = require("./connection")
+
+
+///////////////////////////////
+// SCHEMA
+////////////////////////////////
+const CheeseSchema = new mongoose.Schema({
+    name: String,
+    region: String,
+    soft: Boolean,
+    image: String
+})
+
+const Cheese = mongoose.model("Cheese", CheeseSchema);
+
+///////////////////////////////
+// EXPORT
+////////////////////////////////
+
+module.exports = Cheese;
