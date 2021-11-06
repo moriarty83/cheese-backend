@@ -41,7 +41,7 @@ router.put('/:id', async(req, res)=>{
 })
 
 // Create
-router.put('/', async(req, res)=>{
+router.post('/', async(req, res)=>{
     try{res.json(await Cheese.create(req.body))
     } catch(error){
         res.status(400).json(error)
